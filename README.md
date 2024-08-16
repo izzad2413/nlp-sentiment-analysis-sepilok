@@ -29,18 +29,17 @@ The goal is to do sentiment analysis on the remarks and reviews left by visitors
 
 The objective is to conduct sentiment analysis on the comments and reviews of guests visiting the Sepilok Orangutan Sanctuary in Malaysia. The analysis aims to understand the overall sentiment expressed by guests regarding their experiences at the sanctuary.
 
-
 ## Built With
 
 ![My Skills](https://go-skill-icons.vercel.app/api/icons?i=vscode,python,playwright,scikitlearn,nltk&titles=true)
 
 
 ## Data Source
-Data obtained from TripaAdvisor platform through scraping. 
+Data obtained from TripAdvisor platform through web scraping. 
 
 ## Methodology
 
-- **Data Collection:** The dataset is scrap from TripaAdvisor traveller reviews on Sepilok Orangutan Rehabilitation Centre, Sabah. The possible features that may be relevant would be the rating review, the date of review, the category of reviewer & the text review.
+- **Data Collection:** The dataset is scrap from TripaAdvisor traveller reviews on Sepilok Orangutan Rehabilitation Centre, Sabah. The possible features that may be relevant for insights would be the rating review, the date of review, the category of reviewer & the text review.
 - **Preprocessing:**
 - **Model Development:**
 - **Model Evaluation:**
