@@ -31,7 +31,7 @@ The objective is to conduct sentiment analysis on the comments and reviews of gu
 
 ## Built With
 
-![My Skills](https://go-skill-icons.vercel.app/api/icons?i=vscode,python,playwright,scikitlearn,nltk&titles=true)
+![My Skills](https://go-skill-icons.vercel.app/api/icons?i=vscode,python,playwright,scikitlearn,streamlit,nltk&titles=true)
 
 
 ## Data Source
@@ -39,20 +39,28 @@ Data obtained from TripAdvisor platform through web scraping.
 
 ## Methodology
 
-- **Data Collection:** The dataset is scrap from TripaAdvisor traveller reviews on Sepilok Orangutan Rehabilitation Centre, Sabah. The possible features that may be relevant for insights would be the rating review, the date of review, the category of reviewer & the text review.
-- **Preprocessing:**
-- **Model Development:**
-- **Model Evaluation:**
-- **Deployment:**
+- **Data Collection:** The dataset is scrap from TripaAdvisor traveller reviews on Sepilok Orangutan Rehabilitation Centre, Sabah. With a total of 3657 samples, the four (4) possible features that may be relevant for insights would be the rating review, the date of review, the category of reviewer & the text review.
+- **Preprocessing:** All features were retained, with reviewer_rating converted to integer, review_date to date type, Na in reviewer_category replaced with "Not Specify," and a new reviewer_sentiment feature created based on reviewer_rating. The text_review is later used tokenization, remove stopwords, and remove special characters & numbers for text analysis.
+- **Model Development:** The text_review is processed again using WordNetLemmatizer and converted into a numeric matrix using CountVectorizer. Random Forest (RF), Decision Tree (DT), and Multilayer Perceptron (MLP) were tested with optimized parameters.
+- **Model Evaluation:** The models were evaluated using accuracy, precision, recall, F1-score, and confusion matrix.
+- **Deployment:** The best-performing model was deployed using Streamlit.
 
 ## Result and Impact
 
+- **Visitor Sentiment and Satisfaction:** 85% of visitors expressed positive sentiment, with couples being the largest visitor category.
+- **Visitor Trends:** Visits peaked in 2017 but sharply declined after the COVID-19 pandemic, with April, July, and August being the busiest months.
+- **Text Analysis:** WordCloud analysis of text_review by sentiment shows common words—positive: "sanctuary," "centre," "great," "animal"; neutral: "people," "good," "place," "sanctuary"; negative: "place," "zoo," "people."
+- **Best Model Prediction** The RF model performs the best out of all the models that were tested.
 
 ## Challenges and Solutions
 
-
+- **Data Scraping:** TripAdvisor's dynamic website posed challenges, resolved by using Python and Playwright for efficient data collection.
+- **Model Building:** Lack of custom model-building skills was addressed by leveraging open-source libraries like scikit-learn.
+- **Model Deployment:** Difficulty hosting models online was overcome by deploying them with the free and user-friendly Streamlit framework.
+  
 ## How to Use
 
+To test the application, click this link:
 
 ## Acknowledgement
 
