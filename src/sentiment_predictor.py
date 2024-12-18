@@ -6,48 +6,48 @@ from nltk.stem import WordNetLemmatizer
 from nltk.corpus import stopwords
 import re
 
-nltk.download('stopwords')
-nltk.download('wordnet')
+# nltk.download('stopwords')
+# nltk.download('wordnet')
 
-STOPWORDS = set(stopwords.words("english"))
+# STOPWORDS = set(stopwords.words("english"))
 
-def load_model():
-    try:
-        predictor = pickle.load(open("models/model_rf.pkl", "rb"))
-        scaler = pickle.load(open("models/scaler.pkl", "rb"))
-        cv = pickle.load(open("models/cv.pkl", "rb"))
-        return predictor, scaler, cv
-    except FileNotFoundError:
-        st.error("Model files are missing. Ensure 'model_rf.pkl', 'scaler.pkl', and 'cv.pkl' are in the 'models/' directory.")
-        return None, None, None
+# def load_model():
+#     try:
+#         predictor = pickle.load(open("models/model_rf.pkl", "rb"))
+#         scaler = pickle.load(open("models/scaler.pkl", "rb"))
+#         cv = pickle.load(open("models/cv.pkl", "rb"))
+#         return predictor, scaler, cv
+#     except FileNotFoundError:
+#         st.error("Model files are missing. Ensure 'model_rf.pkl', 'scaler.pkl', and 'cv.pkl' are in the 'models/' directory.")
+#         return None, None, None
 
 
-def predict(predictor, scaler, cv, text_input):
-    # Clean and preprocess the text input
-    corpus = []
-    lemmatizer = WordNetLemmatizer()
-    review = re.sub('[^a-zA-Z]', ' ', text_input)
-    review = review.lower().split()
-    review = [lemmatizer.lemmatize(word) for word in review if not word in STOPWORDS]
-    review = ' '.join(review)
-    corpus.append(review)
+# def predict(predictor, scaler, cv, text_input):
+#     # Clean and preprocess the text input
+#     corpus = []
+#     lemmatizer = WordNetLemmatizer()
+#     review = re.sub('[^a-zA-Z]', ' ', text_input)
+#     review = review.lower().split()
+#     review = [lemmatizer.lemmatize(word) for word in review if not word in STOPWORDS]
+#     review = ' '.join(review)
+#     corpus.append(review)
     
-    # Vectorize and scale the text
-    x_pred = cv.transform(corpus).toarray()
-    x_pred_scaled = scaler.transform(x_pred)
+#     # Vectorize and scale the text
+#     x_pred = cv.transform(corpus).toarray()
+#     x_pred_scaled = scaler.transform(x_pred)
     
-    # Get the probabilities for each class
-    y_pred = predictor.predict_proba(x_pred_scaled)
-    y_pred_class = y_pred.argmax(axis=1)[0]
+#     # Get the probabilities for each class
+#     y_pred = predictor.predict_proba(x_pred_scaled)
+#     y_pred_class = y_pred.argmax(axis=1)[0]
     
-    # Map the output to the corresponding sentiment
-    sentiment_mapping = {
-        0: "Negative",
-        1: "Neutral",
-        2: "Positive"
-    }
+#     # Map the output to the corresponding sentiment
+#     sentiment_mapping = {
+#         0: "Negative",
+#         1: "Neutral",
+#         2: "Positive"
+#     }
     
-    return y_pred_class, sentiment_mapping[y_pred_class]
+#     return y_pred_class, sentiment_mapping[y_pred_class]
     
     
 def show_predict_page():
