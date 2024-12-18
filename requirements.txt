@@ -73,7 +73,6 @@ nbclient==0.10.0
 nbconvert==7.16.4
 nbformat==5.10.4
 nest_asyncio @ file:///home/conda/feedstock_root/build_artifacts/nest-asyncio_1705850609492/work
--e git+https://github.com/izzad2413/nlp-sentiment-analysis-sepilok.git@6fa11ea4ce9638e2a89e3c76e2667663e93882cf#egg=nlpSentimentanalysis
 nltk==3.8.1
 notebook==7.2.1
 notebook_shim==0.2.4
