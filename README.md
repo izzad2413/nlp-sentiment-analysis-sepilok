@@ -60,7 +60,7 @@ Data obtained from TripAdvisor platform through web scraping.
   
 ## How to Use
 
-To test the application, click this link:
+To test the application, click this link: [Sentiment Analyzer at Sepilok Orangutan Sanctuary](https://nlp-sentiment-analysis-sepilok-co5cthyrwy3sowxbevmhrp.streamlit.app/)
 
 ## Acknowledgement
 
