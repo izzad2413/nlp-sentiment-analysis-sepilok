@@ -14,7 +14,7 @@ STOPWORDS = set(stopwords.words("english"))
 def load_model():
     # Get the saved models
     try:
-        predictor = pickle.load(open("models/model_rf.pkl", "rb"))
+        predictor = pickle.load(open("models/model_mlp.pkl", "rb"))
         scaler = pickle.load(open("models/scaler.pkl", "rb"))
         cv = pickle.load(open("models/cv.pkl", "rb"))
         return predictor, scaler, cv
