@@ -62,6 +62,8 @@ Data obtained from TripAdvisor platform through web scraping.
 
 To test the application, click this link: [Sentiment Analyzer at Sepilok Orangutan Sanctuary](https://nlp-sentiment-analysis-sepilok-co5cthyrwy3sowxbevmhrp.streamlit.app/)
 
+[web-app-demo](https://github.com/user-attachments/assets/f4bd50d0-f7ae-4372-8f0a-6c5e4c5edc7c)
+
 ## Acknowledgement
 
 - Tourism Malaysia. (2023, January 19). Malaysia positions itself as a sustainable destination at Fitur and presents for the first time the ecotourism offer of the state of Sabah. Tourism Malaysia. [https://www.tourism.gov.my/media/view/malaysia-positions-itself-as-a-sustainable-destination-at-fitur-and-presents-for-the-first-time-the-ecotourism-offer-of-the-state-of-sabah](https://www.tourism.gov.my/media/view/malaysia-positions-itself-as-a-sustainable-destination-at-fitur-and-presents-for-the-first-time-the-ecotourism-offer-of-the-state-of-sabah)
